@@ -68,6 +68,7 @@ class R2D2(BASE):
         W = self._compute_w(XS, YS_onehot)
 
         pred = (10.0 ** self.alpha) * XQ @ W + self.beta
+        print("prediction: {}".format(pred))
 
         loss = F.cross_entropy(pred, YQ)
 
